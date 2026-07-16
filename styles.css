@@ -307,6 +307,10 @@ h1 {
   background: linear-gradient(135deg, var(--heading), var(--primary));
 }
 
+.headshot-fallback[hidden] {
+  display: none;
+}
+
 .headshot-fallback span {
   font-size: 5rem;
   font-weight: 800;
