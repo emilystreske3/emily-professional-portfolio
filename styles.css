@@ -2290,3 +2290,214 @@ h4 {
     padding: 4.5rem 0 3.5rem;
   }
 }
+
+/* ── Luxury dark-mode second pass ─────────────────────────────────────────── */
+:root {
+  --bg: #060d1d;
+  --bg-alt: #0b1730;
+  --surface: #0f1f3b;
+  --surface-soft: #13294b;
+  --surface-accent: #1a3359;
+  --text: #e6ecff;
+  --muted: #a8b5d1;
+  --heading: #f7f2dd;
+  --primary: #d4af37;
+  --primary-dark: #b7922d;
+  --accent: #f0ca6a;
+  --border: #2a446f;
+  --shadow: 0 18px 48px rgba(1, 5, 16, 0.45);
+  --shadow-strong: 0 28px 72px rgba(1, 5, 16, 0.62);
+}
+
+body {
+  background:
+    radial-gradient(circle at top right, rgba(240, 202, 106, 0.1), transparent 32%),
+    radial-gradient(circle at bottom left, rgba(212, 175, 55, 0.08), transparent 35%),
+    linear-gradient(180deg, #040a17 0%, #09142a 100%);
+}
+
+.site-header,
+.about-page .site-header,
+.resume-page .site-header,
+.projects-page .site-header,
+.blog-page .site-header,
+.post-page .site-header {
+  background: linear-gradient(180deg, rgba(6, 12, 25, 0.94), rgba(8, 17, 35, 0.9));
+  border-bottom: 1px solid rgba(42, 68, 111, 0.92);
+}
+
+.nav-links a:hover,
+.nav-links a:focus-visible {
+  color: var(--accent);
+  background: rgba(212, 175, 55, 0.16);
+}
+
+.logo:hover,
+.logo:focus-visible {
+  color: var(--accent);
+}
+
+.menu-toggle span {
+  background: var(--accent);
+}
+
+.btn.primary {
+  color: #071127;
+  background: linear-gradient(135deg, #b7922d, #d4af37 52%, #f0ca6a 100%);
+  box-shadow: 0 16px 34px rgba(212, 175, 55, 0.3);
+}
+
+.btn.primary:hover,
+.btn.primary:focus-visible {
+  background: linear-gradient(135deg, #9f7f26, #c8a332);
+}
+
+.btn.secondary,
+.btn.ghost {
+  background: rgba(15, 31, 59, 0.8);
+  color: var(--heading);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.btn.ghost:hover,
+.btn.ghost:focus-visible {
+  background: rgba(212, 175, 55, 0.14);
+  border-color: rgba(240, 202, 106, 0.55);
+}
+
+.hero-panel,
+.content-card,
+.skill-card,
+.blog-card,
+.project-card,
+.resume-block,
+.resume-download-card,
+.showcase-card,
+.post-card,
+.blog-featured,
+.footer-inner {
+  background: linear-gradient(180deg, rgba(15, 31, 59, 0.95), rgba(11, 23, 48, 0.98));
+}
+
+.emphasis-card,
+.metric-card,
+.contact-links a,
+.blog-no-results {
+  background: linear-gradient(180deg, rgba(20, 40, 72, 0.92), rgba(15, 31, 59, 0.96));
+}
+
+.section-accent {
+  background: linear-gradient(180deg, #081326 0%, #0e1f3f 100%);
+}
+
+.hero-section {
+  background: linear-gradient(160deg, #051024 0%, #0b1c3a 58%, #12284d 100%);
+}
+
+.hero-section::before {
+  background:
+    radial-gradient(ellipse at 68% 42%, rgba(212, 175, 55, 0.2) 0%, transparent 55%),
+    radial-gradient(ellipse at 14% 78%, rgba(240, 202, 106, 0.14) 0%, transparent 45%);
+}
+
+.brand-pillars li {
+  background: rgba(212, 175, 55, 0.14);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  color: var(--accent);
+}
+
+.headshot-ring {
+  background: linear-gradient(145deg, rgba(212, 175, 55, 0.86), rgba(240, 202, 106, 0.66));
+  box-shadow:
+    0 0 0 1px rgba(212, 175, 55, 0.28),
+    0 20px 54px rgba(1, 5, 16, 0.5),
+    0 0 72px rgba(212, 175, 55, 0.2);
+}
+
+.blog-hero {
+  background: linear-gradient(160deg, #061225 0%, #0b1d3c 60%, #132a4f 100%);
+}
+
+.blog-hero::before,
+.post-hero::before {
+  background:
+    radial-gradient(ellipse at 72% 48%, rgba(212, 175, 55, 0.16) 0%, transparent 55%),
+    radial-gradient(ellipse at 15% 80%, rgba(240, 202, 106, 0.1) 0%, transparent 45%);
+}
+
+.blog-search,
+.blog-filter-btn,
+.contact-form input,
+.contact-form textarea {
+  background: rgba(12, 26, 51, 0.96);
+  border-color: var(--border);
+  color: var(--text);
+}
+
+.blog-filter-btn:hover,
+.blog-filter-btn:focus-visible {
+  background: rgba(212, 175, 55, 0.14);
+  border-color: rgba(212, 175, 55, 0.45);
+  color: var(--accent);
+}
+
+.blog-filter-btn.active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #081326;
+}
+
+.resume-cta-card,
+.showcase-impact,
+.post-takeaways {
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.12), rgba(16, 33, 62, 0.9));
+  border-color: rgba(212, 175, 55, 0.35);
+}
+
+.related-posts {
+  background: linear-gradient(180deg, #071226 0%, #0d1e3b 100%);
+  border-top: 1px solid var(--border);
+}
+
+.cat-cybersecurity,
+.cat-compliance,
+.cat-devops,
+.cat-cloud,
+.cat-leadership,
+.cat-trends,
+.post-hero-meta .post-category {
+  background: rgba(212, 175, 55, 0.18);
+  color: var(--accent);
+}
+
+.img-cybersecurity,
+.img-compliance,
+.img-devops,
+.img-cloud,
+.img-leadership,
+.img-trends,
+.showcase-screenshot--titan,
+.showcase-screenshot--shield,
+.showcase-screenshot--consulting,
+.showcase-screenshot--devops,
+.showcase-screenshot--cloud {
+  background: linear-gradient(150deg, #0d1f3f 0%, #1a3359 55%, #806727 100%);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus,
+.menu-toggle:focus-visible,
+.btn:focus-visible,
+.nav-links a:focus-visible,
+.contact-links a:focus-visible,
+.post-details summary:focus-visible,
+.blog-search:focus {
+  outline: 3px solid rgba(212, 175, 55, 0.32);
+  box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.1);
+}
+
+@media (max-width: 720px) {
+  .nav-links {
+    background: rgba(8, 18, 37, 0.98);
+  }
+}
