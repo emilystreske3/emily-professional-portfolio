@@ -430,7 +430,7 @@ h1 {
 }
 
 .skills-grid {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .skill-card {
@@ -772,6 +772,201 @@ h4 {
 @media (max-width: 720px) {
   .projects-grid,
   .blog-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── Hero redesign: dark executive brand section ─────────────────────────── */
+
+.hero-section {
+  background: linear-gradient(160deg, #060e1e 0%, #0a1830 55%, #0e1f3d 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 68% 42%, rgba(27, 92, 255, 0.14) 0%, transparent 55%),
+    radial-gradient(ellipse at 14% 78%, rgba(15, 157, 139, 0.08) 0%, transparent 45%);
+  pointer-events: none;
+}
+
+.hero-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(240px, 0.7fr);
+  gap: 4rem;
+  align-items: center;
+  padding: 6rem 0 5rem;
+  width: min(calc(100% - 2rem), var(--max-width));
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-inner .hero-copy {
+  display: grid;
+  gap: 1.75rem;
+}
+
+.hero-section .eyebrow {
+  color: rgba(130, 170, 255, 0.95);
+  letter-spacing: 0.18em;
+}
+
+.hero-section h1 {
+  font-size: clamp(3.6rem, 9vw, 7rem);
+  line-height: 0.92;
+  color: #ffffff;
+  letter-spacing: -0.05em;
+}
+
+.hero-title {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 1.05rem;
+  font-weight: 500;
+  margin: 0;
+  line-height: 1.55;
+}
+
+.hero-section .hero-text {
+  color: rgba(255, 255, 255, 0.52);
+  font-size: 1.05rem;
+  line-height: 1.72;
+  max-width: 50ch;
+  margin: 0;
+}
+
+.brand-pillars {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.brand-pillars li {
+  padding: 0.42rem 1rem;
+  background: rgba(27, 92, 255, 0.14);
+  border: 1px solid rgba(27, 92, 255, 0.3);
+  border-radius: 999px;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.brand-pillars li:hover {
+  background: rgba(27, 92, 255, 0.28);
+  border-color: rgba(27, 92, 255, 0.55);
+}
+
+.btn.ghost {
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.btn.ghost:hover,
+.btn.ghost:focus-visible {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.32);
+  transform: translateY(-2px);
+}
+
+.hero-visual {
+  display: grid;
+  justify-items: center;
+  gap: 1.25rem;
+}
+
+.headshot-ring {
+  position: relative;
+  width: min(100%, 290px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  padding: 4px;
+  background: linear-gradient(145deg, rgba(27, 92, 255, 0.75), rgba(15, 157, 139, 0.55));
+  box-shadow:
+    0 0 0 1px rgba(27, 92, 255, 0.12),
+    0 24px 64px rgba(0, 0, 0, 0.5),
+    0 0 80px rgba(27, 92, 255, 0.15);
+}
+
+.headshot-ring .headshot-image,
+.headshot-ring .headshot-fallback {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: none;
+  aspect-ratio: 1;
+}
+
+.hero-badge {
+  text-align: center;
+}
+
+.hero-badge-name {
+  color: rgba(255, 255, 255, 0.92);
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: -0.03em;
+  margin: 0;
+}
+
+.hero-badge-title {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.88rem;
+  font-weight: 500;
+  margin: 0.3rem 0 0;
+}
+
+/* ── Hero responsive ─────────────────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .hero-inner {
+    grid-template-columns: 1fr;
+    padding: 4.5rem 0 4rem;
+    text-align: center;
+  }
+
+  .hero-visual {
+    order: -1;
+  }
+
+  .hero-section .hero-text {
+    max-width: none;
+  }
+
+  .brand-pillars {
+    justify-content: center;
+  }
+
+  .hero-section .hero-actions {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 720px) {
+  .hero-section h1 {
+    font-size: 3.2rem;
+  }
+
+  .headshot-ring {
+    width: min(100%, 220px);
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-grid {
     grid-template-columns: 1fr;
   }
 }
