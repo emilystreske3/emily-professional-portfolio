@@ -8,12 +8,14 @@
     name="description"
     content="Zero Trust is more than a technical framework — it is an operating philosophy that demands every access decision be verified, every session be limited, and every assumption of implicit trust be replaced with explicit authorization."
   />
-  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
+  <meta name="author" content="Emily Streske" />
+  <meta name="keywords" content="Emily Streske, cybersecurity, software engineering, DevOps, business operations, Shield Technologies, MSSP, compliance readiness, risk management, secure software delivery" />
+  <link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg" />
   <meta property="og:title" content="Zero Trust Architecture: A Practical Implementation Guide" />
   <meta property="og:description" content="A practical guide to implementing Zero Trust Architecture for executive technology leaders." />
   <meta property="og:type" content="article" />
   <meta property="og:url" content="https://emilystreske3.github.io/emily-streske/blog/cybersecurity-zero-trust-architecture.html" />
-  <meta property="og:image" content="https://github.com/user-attachments/assets/9c6bf0b3-516e-423a-a13f-56988ceb57b4" />
+  <meta property="og:image" content="https://emilystreske3.github.io/emily-streske/assets/images/STRESKE-56.jpg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
@@ -45,10 +47,11 @@
       <ul class="nav-links" id="navLinks">
         <li><a href="../index.html">Home</a></li>
         <li><a href="../about.html">About</a></li>
-        <li><a href="../resume.html">Resume</a></li>
+        <li><a href="../index.html#shield-technologies">Shield Technologies</a></li>
         <li><a href="../projects.html">Projects</a></li>
-        <li><a href="index.html" aria-current="page">Insights</a></li>
-        <li><a href="../index.html#contact">Contact</a></li>
+        <li><a href="index.html" aria-current="page">Blog</a></li>
+        <li><a href="../resume.html">Download Resume</a></li>
+        <li><a href="../contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
@@ -82,80 +85,42 @@
     <article class="post-article">
       <div class="post-article-inner">
         <div class="post-body-content">
+          <figure class="post-image-placeholder">
+            <img src="../assets/images/blog/cybersecurity.svg" alt="Zero Trust implementation visual" loading="lazy" />
+            <figcaption>Illustrative graphic created for this article. Source: Emily Streske.</figcaption>
+          </figure>
 
-          <h2>What Zero Trust Actually Means</h2>
+          <h2>Zero Trust Begins with Identity and Access Clarity</h2>
           <p>
-            The phrase "never trust, always verify" has become familiar in security circles, but
-            translating it into operational reality requires more than deploying a new tool or
-            updating a policy document. Zero Trust Architecture (ZTA) is a security model that
-            eliminates implicit trust based on network location or user identity alone. Every
-            request — whether it originates inside the perimeter or outside — is treated as
-            potentially hostile until verified.
+            Zero Trust is most effective when organizations start by tightening identity governance.
+            This includes strong authentication for privileged actions, least-privilege role design,
+            and continuous review of who can access critical systems. These controls reduce lateral
+            movement risk and improve visibility into abnormal behavior.
           </p>
           <p>
-            This matters because the traditional perimeter security model assumed that threats
-            came from outside the network and that internal users and systems could be trusted
-            by default. Modern attack patterns have proven that assumption false. Insider threats,
-            compromised credentials, and lateral movement after initial breach are now standard
-            in advanced persistent threat campaigns. Zero Trust addresses this by enforcing
-            least-privilege access, continuous verification, and micro-segmentation at every layer.
+            Teams should also map trust boundaries by business function, not just by network segment.
+            That keeps policy aligned to real operational risk.
           </p>
 
-          <h2>The Five Core Principles</h2>
+          <h2>Implement in Phases and Measure Business Impact</h2>
           <p>
-            Effective Zero Trust implementation rests on five principles that must work together
-            as a system rather than in isolation:
-          </p>
-          <ul>
-            <li><strong>Verify explicitly:</strong> Authenticate and authorize based on all available data points — identity, device health, location, service, and workload.</li>
-            <li><strong>Use least-privilege access:</strong> Limit user access with just-in-time and just-enough-access policies, risk-based adaptive controls, and data protection.</li>
-            <li><strong>Assume breach:</strong> Minimize blast radius, segment access, verify end-to-end encryption, and use analytics to get visibility, drive threat detection, and improve defenses.</li>
-            <li><strong>Protect all resources:</strong> Apply consistent policy to users, devices, applications, and data regardless of where they reside.</li>
-            <li><strong>Inspect and log all traffic:</strong> Use telemetry to validate security posture in real time rather than relying on periodic reviews.</li>
-          </ul>
-
-          <h2>Starting Points for Executive Leaders</h2>
-          <p>
-            Zero Trust implementations often stall when they are framed purely as technology
-            projects. The most successful programs start with a business-driven inventory of
-            what needs to be protected, who needs access, and what the acceptable risk thresholds
-            are. That foundation allows the technical architecture to serve real operational
-            requirements.
+            Phased rollout is more sustainable than enterprise-wide replacement. Microsoft guidance on
+            <a href="https://learn.microsoft.com/security/zero-trust/" target="_blank" rel="noopener noreferrer">Zero Trust</a>
+            emphasizes iterative implementation across identities, devices, applications, and data.
           </p>
           <p>
-            Practical starting points include identity and access management maturity assessments,
-            multi-factor authentication enforcement across all privileged accounts, and device
-            health attestation before network access is granted. These measures can be implemented
-            incrementally, reducing disruption while building momentum toward a comprehensive
-            Zero Trust posture.
-          </p>
-
-          <h2>Common Implementation Challenges</h2>
-          <p>
-            Organizations frequently encounter three challenges during Zero Trust rollouts. First,
-            legacy systems that do not support modern authentication protocols require compensating
-            controls or phased retirement planning. Second, change management is consistently
-            underestimated — users and teams accustomed to implicit trust find new verification
-            requirements disruptive unless onboarding and communication are carefully managed.
-            Third, visibility gaps in shadow IT, unmanaged devices, and third-party integrations
-            can leave significant exposure even as formal systems are hardened.
+            I track progress through measurable indicators: privileged sessions covered by MFA,
+            high-risk access pathways reduced, and response time for suspicious activity. This makes
+            Zero Trust an operational program with visible outcomes, not just a security slogan.
           </p>
           <p>
-            Executive sponsors who understand these challenges in advance are better positioned
-            to resource the program appropriately, set realistic timelines, and maintain
-            organizational support through the inevitable friction of the transition period.
+            For executive leaders, the practical next step is to translate these ideas into a
+            standing monthly operating review: one section for risk movement, one for remediation
+            ownership, and one for measurable outcomes. This keeps technical work tied to
+            business decisions and helps teams improve consistently rather than react episodically.
+            Programs that use this rhythm usually see faster escalation, clearer accountability,
+            and stronger trust across engineering, operations, and compliance stakeholders.
           </p>
-
-          <h2>Measuring Progress</h2>
-          <p>
-            Zero Trust is a journey, not a destination. Measuring progress requires metrics that
-            reflect both technical implementation milestones and business risk reduction outcomes.
-            Key indicators include the percentage of privileged access sessions covered by MFA,
-            the ratio of micro-segmented workloads, mean time to detect lateral movement, and
-            user satisfaction scores for access management workflows. These metrics tell a story
-            that security teams, executives, and boards can understand together.
-          </p>
-
         </div>
 
         <!-- Key takeaways box -->
@@ -225,9 +190,9 @@
     <div class="footer-inner">
       <p class="footer-copy">© 2026 Emily Streske. Executive technology leader in cybersecurity, engineering, and business operations.</p>
       <nav class="footer-links" aria-label="Footer">
-        <a href="mailto:estreske@shieldtechnologiesllc.com">Email</a>
+        <a href="mailto:professional-email@example.com">Email</a>
         <a href="https://www.linkedin.com/in/emily-streske-110392222" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        <a href="../assets/emily-streske-resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+        <a href="../assets/resume/Emily_Streske_Executive_Resume_2026.pdf" target="_blank" rel="noopener noreferrer">Download Resume</a>
       </nav>
     </div>
   </footer>

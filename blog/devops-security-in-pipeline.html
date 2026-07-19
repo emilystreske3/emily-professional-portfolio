@@ -8,12 +8,14 @@
     name="description"
     content="Security integrated at every stage of the development lifecycle is faster, cheaper, and more effective than security bolted on after deployment."
   />
-  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
+  <meta name="author" content="Emily Streske" />
+  <meta name="keywords" content="Emily Streske, cybersecurity, software engineering, DevOps, business operations, Shield Technologies, MSSP, compliance readiness, risk management, secure software delivery" />
+  <link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg" />
   <meta property="og:title" content="Embedding Security Into the CI/CD Pipeline" />
   <meta property="og:description" content="How DevSecOps practices make software delivery faster and more secure by integrating security throughout the development pipeline." />
   <meta property="og:type" content="article" />
   <meta property="og:url" content="https://emilystreske3.github.io/emily-streske/blog/devops-security-in-pipeline.html" />
-  <meta property="og:image" content="https://github.com/user-attachments/assets/9c6bf0b3-516e-423a-a13f-56988ceb57b4" />
+  <meta property="og:image" content="https://emilystreske3.github.io/emily-streske/assets/images/STRESKE-56.jpg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
@@ -45,10 +47,11 @@
       <ul class="nav-links" id="navLinks">
         <li><a href="../index.html">Home</a></li>
         <li><a href="../about.html">About</a></li>
-        <li><a href="../resume.html">Resume</a></li>
+        <li><a href="../index.html#shield-technologies">Shield Technologies</a></li>
         <li><a href="../projects.html">Projects</a></li>
-        <li><a href="index.html" aria-current="page">Insights</a></li>
-        <li><a href="../index.html#contact">Contact</a></li>
+        <li><a href="index.html" aria-current="page">Blog</a></li>
+        <li><a href="../resume.html">Download Resume</a></li>
+        <li><a href="../contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
@@ -83,79 +86,42 @@
     <article class="post-article">
       <div class="post-article-inner">
         <div class="post-body-content">
+          <figure class="post-image-placeholder">
+            <img src="../assets/images/blog/devops.svg" alt="DevSecOps pipeline visual" loading="lazy" />
+            <figcaption>Illustrative graphic created for this article. Source: Emily Streske.</figcaption>
+          </figure>
 
-          <h2>Why "Security at the End" Fails</h2>
+          <h2>Security Works Best When It Is Built Into Flow</h2>
           <p>
-            Traditional software development cycles treated security as a gate at the end of the
-            process — a final review before release that was expected to catch everything missed
-            during development. This model fails for several reasons. It creates bottlenecks,
-            generates rework that is expensive to remediate late in the cycle, and gives developers
-            limited visibility into security requirements until it is too late to address them
-            economically.
+            Security reviews at the end of a release cycle create bottlenecks and expensive rework.
+            Teams move faster when scanning, dependency checks, and policy validation happen during
+            development and CI, not after code is ready for production.
           </p>
           <p>
-            Research consistently shows that the cost of fixing a security vulnerability increases
-            significantly the later it is discovered in the development lifecycle. A defect found
-            during code review costs a fraction of what it costs to patch in production — to say
-            nothing of the operational, reputational, and regulatory costs if it is exploited
-            before it is patched.
+            This shift also improves developer confidence because expectations are visible earlier.
+            Engineers can fix issues when context is fresh instead of revisiting completed work.
           </p>
 
-          <h2>What Shift-Left Security Looks Like</h2>
+          <h2>Start with High-Signal Controls and Iterate</h2>
           <p>
-            Shifting security left means integrating security tooling, requirements, and training
-            into the earliest stages of development. In practice this includes:
-          </p>
-          <ul>
-            <li><strong>Pre-commit hooks:</strong> Static analysis and secret scanning run locally before code is pushed to the repository</li>
-            <li><strong>Automated SAST in CI:</strong> Static Application Security Testing runs on every pull request, blocking merges that introduce high-severity findings</li>
-            <li><strong>Dependency scanning:</strong> Software composition analysis identifies known vulnerable libraries in the dependency tree</li>
-            <li><strong>Container image scanning:</strong> Images are scanned for known CVEs before being promoted to staging or production registries</li>
-            <li><strong>Infrastructure as Code analysis:</strong> IaC configurations are checked for misconfigurations before resources are provisioned</li>
-            <li><strong>DAST in staging:</strong> Dynamic Application Security Testing runs against deployed environments before production release</li>
-          </ul>
-
-          <h2>Culture Is the Hard Part</h2>
-          <p>
-            The tooling for DevSecOps is mature and widely available. The organizational challenge
-            is cultural: convincing development teams that security is their responsibility, not
-            just the security team's. This requires leadership to frame security as a quality
-            dimension of engineering work rather than an external constraint.
+            CISA secure-by-design guidance highlights reducing exploitable defaults and making secure
+            outcomes easier than insecure ones.
+            <a href="https://www.cisa.gov/securebydesign" target="_blank" rel="noopener noreferrer">Secure by Design</a>
+            aligns well with phased DevSecOps adoption.
           </p>
           <p>
-            Effective DevSecOps programs invest in developer security training, create clear
-            escalation paths for security questions, and avoid punitive responses when developers
-            raise concerns early. When raising a security issue is rewarded rather than penalized,
-            more issues get raised — which is exactly the outcome a mature program should seek.
-          </p>
-
-          <h2>Measuring Security in the Pipeline</h2>
-          <p>
-            Mature DevSecOps programs track a small set of meaningful metrics that reflect both
-            the health of the security pipeline and the development team's engagement with it.
-            Key indicators include mean time to remediate critical SAST findings, percentage of
-            builds with a complete security scan, the ratio of findings addressed before merge
-            versus after deployment, and the number of security-related rework cycles per
-            release. These metrics create a feedback loop that supports continuous improvement
-            without overwhelming teams with compliance noise.
+            I recommend beginning with secret scanning, dependency analysis, and pull-request policy
+            checks, then expanding to container and infrastructure controls. This sequence delivers
+            fast risk reduction while preserving release cadence and team adoption.
           </p>
           <p>
-            Executive leaders can support this by ensuring that security metrics are reviewed
-            alongside delivery metrics in engineering leadership forums, and that the security
-            team is resourced to respond to developer questions quickly enough to avoid becoming
-            a bottleneck themselves.
+            For executive leaders, the practical next step is to translate these ideas into a
+            standing monthly operating review: one section for risk movement, one for remediation
+            ownership, and one for measurable outcomes. This keeps technical work tied to
+            business decisions and helps teams improve consistently rather than react episodically.
+            Programs that use this rhythm usually see faster escalation, clearer accountability,
+            and stronger trust across engineering, operations, and compliance stakeholders.
           </p>
-
-          <h2>Starting Small and Scaling</h2>
-          <p>
-            Organizations new to DevSecOps should resist the temptation to instrument everything
-            at once. A phased approach — starting with secret scanning and dependency analysis
-            across all repositories, then expanding to SAST for the highest-risk services, then
-            adding IaC scanning and runtime protection — is more sustainable and builds developer
-            confidence at each stage. Tooling that produces manageable, high-signal findings will
-            be adopted. Tooling that floods teams with noise will be disabled or ignored.
-          </p>
-
         </div>
 
         <!-- Key takeaways box -->
@@ -225,9 +191,9 @@
     <div class="footer-inner">
       <p class="footer-copy">© 2026 Emily Streske. Executive technology leader in cybersecurity, engineering, and business operations.</p>
       <nav class="footer-links" aria-label="Footer">
-        <a href="mailto:estreske@shieldtechnologiesllc.com">Email</a>
+        <a href="mailto:professional-email@example.com">Email</a>
         <a href="https://www.linkedin.com/in/emily-streske-110392222" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        <a href="../assets/emily-streske-resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+        <a href="../assets/resume/Emily_Streske_Executive_Resume_2026.pdf" target="_blank" rel="noopener noreferrer">Download Resume</a>
       </nav>
     </div>
   </footer>

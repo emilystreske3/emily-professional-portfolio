@@ -12,10 +12,14 @@
     var visibleCount = 0;
 
     postCards.forEach(function (card) {
-      var category = card.dataset.category || '';
+      var categoryList = (card.dataset.category || '')
+        .toLowerCase()
+        .split(',')
+        .map(function (item) { return item.trim(); })
+        .filter(Boolean);
       var text = card.textContent.toLowerCase();
 
-      var matchesCategory = activeCategory === 'all' || category === activeCategory;
+      var matchesCategory = activeCategory === 'all' || categoryList.includes(activeCategory);
       var matchesSearch = searchQuery === '' || text.includes(searchQuery);
 
       var visible = matchesCategory && matchesSearch;
