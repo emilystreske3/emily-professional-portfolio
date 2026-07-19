@@ -1293,3 +1293,309 @@ h4 {
     gap: 0.5rem;
   }
 }
+
+/* ── Projects page ──────────────────────────────────────────────────────────── */
+.projects-page .site-header {
+  background: rgba(247, 249, 252, 0.9);
+}
+
+.page-hero-grid--narrow {
+  grid-template-columns: 1fr !important;
+  max-width: 740px;
+}
+
+.projects-page-section {
+  padding-top: 4.5rem;
+  padding-bottom: 0;
+}
+
+.projects-page-section:last-of-type {
+  padding-bottom: 5rem;
+}
+
+.projects-cta-section {
+  padding-bottom: 5rem !important;
+}
+
+/* Showcase card: image left, body right (or reversed) */
+.showcase-card {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.9fr) minmax(0, 1.4fr);
+  gap: 0;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.showcase-card--reverse {
+  grid-template-columns: minmax(0, 1.4fr) minmax(280px, 0.9fr);
+}
+
+.showcase-card--reverse .showcase-screenshot {
+  order: 2;
+}
+
+.showcase-card--reverse .showcase-body {
+  order: 1;
+}
+
+/* Screenshot placeholder */
+.showcase-screenshot {
+  min-height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.showcase-screenshot--titan {
+  background: linear-gradient(160deg, #0a1630 0%, #0d1f42 50%, #132b5e 100%);
+}
+
+.showcase-screenshot--shield {
+  background: linear-gradient(160deg, #071a15 0%, #0c2820 50%, #0f3327 100%);
+}
+
+.showcase-screenshot--consulting {
+  background: linear-gradient(160deg, #080e1e 0%, #0b1530 50%, #0f1c3e 100%);
+}
+
+.showcase-screenshot--devops {
+  background: linear-gradient(160deg, #071510 0%, #0b2218 50%, #0d2c20 100%);
+}
+
+.showcase-screenshot--cloud {
+  background: linear-gradient(160deg, #070d1c 0%, #0a1427 50%, #0d1a35 100%);
+}
+
+/* Decorative rings behind the icon */
+.showcase-screenshot::before,
+.showcase-screenshot::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.showcase-screenshot::before {
+  inset: -40px;
+  background: radial-gradient(circle at 50% 50%, rgba(27, 92, 255, 0.12), transparent 60%);
+}
+
+.showcase-screenshot::after {
+  width: 200px;
+  height: 200px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.showcase-screenshot-inner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  justify-items: center;
+  gap: 1rem;
+}
+
+.showcase-icon {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.showcase-icon svg {
+  width: 48px;
+  height: 48px;
+}
+
+.showcase-screenshot-label {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/* Showcase body */
+.showcase-body {
+  padding: 2.25rem;
+  display: grid;
+  gap: 1.5rem;
+  align-content: start;
+  border-left: 1px solid var(--border);
+}
+
+.showcase-card--reverse .showcase-body {
+  border-left: none;
+  border-right: 1px solid var(--border);
+}
+
+.showcase-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.showcase-number {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--border);
+  line-height: 1;
+  letter-spacing: -0.06em;
+  user-select: none;
+}
+
+.showcase-title {
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+  color: var(--heading);
+  margin: 0;
+}
+
+.showcase-summary {
+  margin: 0;
+  color: var(--muted);
+  font-size: 1.03rem;
+  line-height: 1.7;
+}
+
+.showcase-sub-heading {
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 0.75rem;
+}
+
+/* Tech tags */
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.tech-tag {
+  padding: 0.3rem 0.85rem;
+  background: var(--surface-accent);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--heading);
+  font-size: 0.8rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.showcase-list {
+  gap: 0.85rem;
+}
+
+/* Impact block */
+.showcase-impact {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  padding: 1.25rem 1.5rem;
+  background: linear-gradient(135deg, rgba(27, 92, 255, 0.06), rgba(15, 157, 139, 0.04));
+  border: 1px solid rgba(27, 92, 255, 0.14);
+  border-radius: var(--radius-md);
+}
+
+.showcase-impact-icon {
+  flex-shrink: 0;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent), var(--primary));
+  color: #fff;
+  font-size: 0.65rem;
+  line-height: 1;
+  margin-top: 0.15rem;
+}
+
+.showcase-impact-label {
+  margin: 0 0 0.35rem;
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--primary);
+}
+
+.showcase-impact-text {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.97rem;
+  line-height: 1.65;
+}
+
+.showcase-footer {
+  padding-top: 0.25rem;
+}
+
+/* Responsive */
+@media (max-width: 1000px) {
+  .showcase-card,
+  .showcase-card--reverse {
+    grid-template-columns: 1fr;
+  }
+
+  .showcase-card--reverse .showcase-screenshot {
+    order: unset;
+  }
+
+  .showcase-card--reverse .showcase-body {
+    order: unset;
+    border-right: none;
+    border-top: 1px solid var(--border);
+  }
+
+  .showcase-body {
+    border-left: none;
+    border-top: 1px solid var(--border);
+  }
+
+  .showcase-screenshot {
+    min-height: 220px;
+  }
+}
+
+@media (max-width: 720px) {
+  .projects-page-section {
+    padding-top: 4rem;
+  }
+
+  .showcase-body {
+    padding: 1.5rem;
+    gap: 1.25rem;
+  }
+
+  .showcase-number {
+    font-size: 1.8rem;
+  }
+
+  .tech-tag {
+    font-size: 0.75rem;
+  }
+}
